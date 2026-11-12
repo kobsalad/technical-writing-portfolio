@@ -1,18 +1,14 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Background
+As a Computer Science student at the University of Central Florida, my background dates back to when I started learning Roblox game development at 12 years old. Ever since then, I've had a passion in understanding every tiny detail of software development.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## Interests and skills
+Game development was my first interest in the field of computer science, but my skills quickly expanded to many other areas. As I learned new languages, I fell in love with the organization of object oriented programming, particularly through Java. The consistent nature of Java documentation through JavaDoc was very appealing, and sparked my interest in programming documentation. My skills also expanded into web development, where I enjoyed using frameworks like React to conceptually simplify UI development. Native mobile Android development has also been a recent hobby of mine, as I've been learning a new framework and language for it.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+## Goals
+I aim to improve my technical writing skills in order to better document the software that I create in my career. In the era of artificial intelligence, new software is being created faster than ever. Proper documentation is crucial to prevent confusion.
