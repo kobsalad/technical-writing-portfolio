@@ -1,29 +1,26 @@
-{% assign document_title_id = page.document_title | slugify | prepend: "document-title-" %}
 <div class="project-page">
-  <p class="project-lede">{{ page.intro | escape }}</p>
-
   <div class="project-reflection">
     <section class="project-section">
-      <h2>{{ page.overview_heading | escape }}</h2>
-      <p class="project-placeholder">{{ page.overview_text | escape }}</p>
+      <h2>Assignment overview</h2>
+      <p>{{ page.overview | escape }}</p>
     </section>
     <section class="project-section">
-      <h2>{{ page.approach_heading | escape }}</h2>
-      <p class="project-placeholder">{{ page.approach_text | escape }}</p>
+      <h2>My approach</h2>
+      <p>{{ page.approach | escape }}</p>
     </section>
     <section class="project-section">
-      <h2>{{ page.revisions_heading | escape }}</h2>
-      <p class="project-placeholder">{{ page.revisions_text | escape }}</p>
+      <h2>Revisions made</h2>
+      <p>{{ page.revisions | escape }}</p>
     </section>
     <section class="project-section">
-      <h2>{{ page.learning_heading | escape }}</h2>
-      <p class="project-placeholder">{{ page.learning_text | escape }}</p>
+      <h2>What I learned</h2>
+      <p>{{ page.learning | escape }}</p>
     </section>
   </div>
 
-  <section class="project-document" aria-labelledby="{{ document_title_id }}">
+  <section class="project-document" aria-label="Revised {{ page.title | escape }} document">
     <div class="project-embed">
-      <iframe title="Revised {{ page.document_title | escape }} project" src="{{ page.document_url | escape }}" loading="lazy"></iframe>
+      <iframe title="Revised {{ page.title | escape }} document" src="{{ page.document_url | escape }}" loading="lazy"></iframe>
     </div>
   </section>
 </div>

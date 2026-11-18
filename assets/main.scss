@@ -88,15 +88,6 @@ a:focus-visible {
   line-height: 1.4;
 }
 
-.project-label {
-  margin-bottom: 10px;
-  color: $portfolio-accent;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-
 .home-guide {
   max-width: 760px;
   margin: 52px auto 0;
@@ -145,14 +136,6 @@ a:focus-visible {
   gap: 28px;
 }
 
-.project-lede {
-  max-width: 720px;
-  margin-bottom: 0;
-  color: $portfolio-muted;
-  font-size: 19px;
-  line-height: 1.55;
-}
-
 .project-reflection,
 .project-document {
   padding: 28px;
@@ -167,42 +150,21 @@ a:focus-visible {
   gap: 24px;
 }
 
-.project-section h2,
-.project-document-heading h2 {
+.project-section h2 {
   margin-bottom: 10px;
   color: $portfolio-ink;
   font-size: 21px;
   font-weight: 600;
 }
 
-.project-section p,
-.project-document-heading p:last-child {
+.project-section p {
   margin-bottom: 0;
   color: $portfolio-muted;
-}
-
-.project-placeholder {
-  padding: 14px 16px;
-  background: $portfolio-paper;
-  border: 1px dashed #c5d1ce;
 }
 
 .project-document {
   padding: 0;
   overflow: hidden;
-}
-
-.project-document-heading {
-  padding: 24px 28px;
-  border-bottom: 1px solid #dce3e1;
-}
-
-.project-document-heading h2 {
-  margin-bottom: 6px;
-}
-
-.project-document-heading .project-label {
-  margin-bottom: 8px;
 }
 
 .project-embed iframe {
@@ -249,14 +211,6 @@ a:focus-visible {
   .project-reflection {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 22px;
-  }
-
-  .project-guidance {
-    grid-column: auto;
-  }
-
-  .project-document-heading {
     padding: 22px;
   }
 
