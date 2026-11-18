@@ -4,6 +4,8 @@ title: About me
 permalink: /about/
 ---
 
+<img class="about-photo" src="{{ '/assets/profile.jpg' | relative_url }}" alt="Jacob Lamp" width="300" height="380">
+
 ## Background
 As a Computer Science student at the University of Central Florida, my background dates back to when I started learning Roblox game development at 12 years old. Ever since then, I've had a passion in understanding every tiny detail of software development.
 
