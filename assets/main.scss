@@ -3,16 +3,36 @@
 
 @import "minima";
 
-$portfolio-ink: #203047;
-$portfolio-muted: #526579;
-$portfolio-accent: #286b68;
-$portfolio-paper: #f3f5f4;
+$portfolio-ink: #000;
+$portfolio-heading: #62432f;
+$portfolio-accent: #76502f;
+$portfolio-paper: #fff;
+$portfolio-background: #f2f3f4;
+$portfolio-header: #ead8c2;
+$portfolio-line: #e4dbce;
+$portfolio-surface: #fff;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-mobile: 1.25rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
 
 body {
   color: $portfolio-ink;
-  background-color: $portfolio-paper;
+  background-color: $portfolio-background;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   font-size: 18px;
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $portfolio-heading;
 }
 
 a,
@@ -21,7 +41,7 @@ a:visited {
 }
 
 a:hover {
-  color: $portfolio-ink;
+  color: #5b4330;
 }
 
 a:focus-visible {
@@ -30,44 +50,78 @@ a:focus-visible {
 }
 
 .site-header {
-  background: #fff;
-  border-top: 4px solid $portfolio-accent;
-  border-bottom-color: #dce3e1;
+  background: $portfolio-header;
+  border-bottom-color: $portfolio-line;
 }
 
 .site-title,
 .site-title:visited {
-  color: $portfolio-ink;
+  color: $portfolio-heading;
   font-weight: 600;
 }
 
 .site-nav .page-link {
+  display: inline-block;
+  padding: $space-xs $space-sm;
+  border-radius: 4px;
   color: $portfolio-ink;
+}
+
+.site-nav .page-link[href$="/about/"] {
+  background: #d8c2a5;
+}
+
+.site-nav .page-link[href$="/about/"]:hover {
+  background: #cfb493;
+  color: $portfolio-ink;
+}
+
+.site-nav .page-link[href$="/project-1/"],
+.site-nav .page-link[href$="/project-2/"],
+.site-nav .page-link[href$="/project-3/"] {
+  background: $portfolio-accent;
+  color: $portfolio-surface;
+}
+
+.site-nav .page-link[href$="/project-1/"]:hover,
+.site-nav .page-link[href$="/project-2/"]:hover,
+.site-nav .page-link[href$="/project-3/"]:hover {
+  background: #5e3d25;
+  color: #fffaf3;
+}
+
+.site-nav .menu-icon > svg {
+  fill: $portfolio-ink;
 }
 
 .page-content {
   flex: 1;
-  padding: 48px 0 64px;
+  padding: $space-lg 0 $space-xl;
 }
 
 .wrapper {
   max-width: 1100px;
 }
 
+.home-panel,
+.post,
+.project-reflection,
+.project-document {
+  border-radius: 4px;
+  background: $portfolio-surface;
+}
+
 .home-panel {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 42px;
-  background: #fff;
-  border: 1px solid #dce3e1;
-  border-radius: 3px;
+  padding: $space-lg;
 }
 
 .home-intro {
   display: grid;
   grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
   align-items: center;
-  gap: 64px;
+  gap: $space-xl;
 }
 
 .profile-photo {
@@ -79,110 +133,103 @@ a:focus-visible {
 }
 
 .home-copy h1 {
-  margin-bottom: 14px;
-  color: $portfolio-ink;
+  margin-bottom: $space-sm;
+  color: $portfolio-heading;
   font-size: 52px;
   font-weight: 600;
   letter-spacing: -1.5px;
 }
 
-.home-copy p,
-.post-content p {
-  color: $portfolio-muted;
-}
-
 .home-copy p {
-  margin-bottom: 22px;
+  color: $portfolio-ink;
+  margin-bottom: $space-sm;
   font-size: 22px;
   line-height: 1.5;
 }
 
 .home-guide {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid #dce3e1;
+  margin-top: $space-lg;
+  padding-top: $space-md;
+  border-top: 1px solid $portfolio-line;
 }
 
 .home-guide h2 {
-  margin-bottom: 12px;
-  color: $portfolio-ink;
+  margin-bottom: $space-xs;
+  color: $portfolio-heading;
   font-size: 26px;
   font-weight: 600;
 }
 
 .home-guide p {
   max-width: 820px;
-  color: $portfolio-muted;
+  color: $portfolio-ink;
 }
 
 .about-photo {
   float: right;
   width: 280px;
   height: 355px;
-  margin: 4px 0 24px 36px;
-  border: 1px solid #dce3e1;
+  margin: 0 0 $space-md $space-lg;
   object-fit: cover;
   object-position: center 25%;
 }
 
 .post-content h2 {
-  color: $portfolio-ink;
+  margin-top: $space-lg;
+  color: $portfolio-heading;
   font-size: 28px;
   font-weight: 600;
 }
 
 .post {
-  padding: 40px 48px;
-  background: #fff;
+  padding: $space-lg;
 }
 
 .post-header {
-  margin-bottom: 26px;
+  margin-bottom: $space-md;
+  padding-bottom: $space-sm;
+  border-bottom: 1px solid $portfolio-line;
 }
 
 .post-title {
-  color: $portfolio-ink;
+  color: $portfolio-heading;
   font-weight: 600;
-}
-
-.post-content h2 {
-  margin-top: 32px;
 }
 
 .project-page {
   display: grid;
-  gap: 28px;
-}
-
-.project-reflection,
-.project-document {
-  padding: 28px;
-  background: #fff;
-  border: 1px solid #dce3e1;
-  border-radius: 3px;
+  gap: $space-md;
 }
 
 .project-reflection {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  padding: $space-md;
+}
+
+.project-section {
+  padding-bottom: $space-sm;
+}
+
+.project-section:last-child {
+  padding-bottom: 0;
 }
 
 .project-section h2 {
-  margin-bottom: 10px;
-  color: $portfolio-ink;
+  margin: 0 0 $space-xs;
+  color: $portfolio-heading;
   font-size: 23px;
   font-weight: 600;
 }
 
 .project-section p {
   margin-bottom: 0;
-  color: $portfolio-muted;
+  color: $portfolio-ink;
 }
 
 .project-document {
-  padding: 0;
   overflow: hidden;
+  border: 1px solid $portfolio-heading;
 }
 
 .project-embed iframe {
@@ -193,8 +240,18 @@ a:focus-visible {
 }
 
 .site-footer {
-  border-top-color: #dce3e1;
-  background: #fff;
+  border-top: 1px solid $portfolio-line;
+  background: $portfolio-paper;
+  color: $portfolio-ink;
+}
+
+.site-footer .footer-heading {
+  color: $portfolio-heading;
+}
+
+.site-footer a,
+.site-footer a:visited {
+  color: $portfolio-accent;
 }
 
 @media screen and (min-width: 1500px) {
@@ -209,12 +266,11 @@ a:focus-visible {
 
   .home-panel {
     max-width: 94%;
-    padding: 4%;
+    padding: $space-lg;
   }
 
   .home-intro {
     grid-template-columns: minmax(0, 34%) minmax(0, 1fr);
-    gap: 6%;
   }
 
   .profile-photo {
@@ -234,6 +290,10 @@ a:focus-visible {
     font-size: clamp(26px, 2.1vw, 36px);
   }
 
+  .post-content h2 {
+    font-size: clamp(28px, 2.1vw, 36px);
+  }
+
   .home-guide p {
     max-width: 90%;
   }
@@ -242,19 +302,7 @@ a:focus-visible {
     width: 24%;
     height: auto;
     aspect-ratio: 280 / 355;
-    margin-left: 3%;
-  }
-
-  .post {
-    padding: 4% 5%;
-  }
-
-  .post-content h2 {
-    font-size: clamp(28px, 2.1vw, 36px);
-  }
-
-  .project-reflection {
-    padding: clamp(28px, 3vw, 48px);
+    margin-left: $space-lg;
   }
 
   .project-section h2 {
@@ -267,19 +315,30 @@ a:focus-visible {
 }
 
 @media screen and (max-width: 600px) {
+  .site-nav {
+    border-color: $portfolio-line;
+    background-color: $portfolio-paper;
+  }
+
+  .site-nav .trigger {
+    background-color: $portfolio-header;
+  }
+
+  .site-nav .page-link {
+    display: block;
+  }
+
   .page-content {
-    padding: 28px 0 44px;
+    padding: $space-md 0 $space-lg;
   }
 
   .home-intro {
     grid-template-columns: 1fr;
-    gap: 28px;
-    max-width: none;
-    margin: 0 auto;
+    gap: $space-md;
   }
 
   .home-panel {
-    padding: 22px;
+    padding: $space-mobile;
   }
 
   .profile-photo {
@@ -289,7 +348,7 @@ a:focus-visible {
   }
 
   .home-guide {
-    margin-top: 30px;
+    margin-top: $space-md;
   }
 
   .home-copy h1 {
@@ -302,16 +361,15 @@ a:focus-visible {
     width: 100%;
     max-width: 240px;
     height: auto;
-    margin: 0 0 28px;
+    margin: 0 0 $space-md;
   }
 
   .post {
-    padding: 28px 24px;
+    padding: $space-md;
   }
 
   .project-reflection {
-    gap: 20px;
-    padding: 22px;
+    padding: $space-mobile;
   }
 
   .project-embed iframe {
