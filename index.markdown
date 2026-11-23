@@ -7,7 +7,7 @@ title: Home
     <img class="profile-photo" src="{{ '/assets/profile.png' | relative_url }}" alt="Jacob Lamp" width="300" height="380">
     <div class="home-copy">
       <h1 id="intro-title">Jacob Lamp</h1>
-      <p>This portfolio compiles my projects and experiences in technical writing, and my revision process. You can also learn a little about me.</p>
+      <p>This portfolio compiles my projects and experiences in technical writing and my revision process. You can also learn a little about me.</p>
     </div>
   </section>
 
